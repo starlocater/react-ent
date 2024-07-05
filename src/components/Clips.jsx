@@ -59,9 +59,9 @@ const Clips = () => {
     }, [])
 
   return (
-    <div className="mt-32 flex h-2/5 align-middle justify-center flex-col">
+    <div className="flex mt-10 md:mt-32 h-2/5 align-middle justify-center flex-col">
         <div className="flex flex-row justify-center items-center">
-            <p className="text-white font-jersey text-6xl text-center">Our platform On-Air</p>
+            <p className="text-white font-jersey text-3xl md:text-6xl text-center">Our platform On-Air</p>
             <FontAwesomeIcon icon={faTowerBroadcast} className="w-10 h-auto ml-4 text-white" />
         </div>
         {/* <Swiper navigation={true} modules={[Navigation]} pagination={true}>

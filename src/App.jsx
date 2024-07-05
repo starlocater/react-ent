@@ -6,6 +6,7 @@ import Streamers from './pages/Streamers';
 import GameDetailsRouter from './components/GameDetailsRouter';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import { useState } from 'react';
+import { Icon } from '@iconify-icon/react';
 
 
 const Layout = ({ isOpen, isGuideOpen, setIsOpen, setIsGuideOpen }) => {

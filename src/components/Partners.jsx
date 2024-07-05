@@ -9,8 +9,8 @@ const Partners = () => {
   return (
     <div className="w-full h-2/5 mt-32 flex justify-center align-middle">
       <div className="w-full h-full columns-1 flex-col">
-        <p className="text-white font-jersey text-6xl text-center"> Partners </p>
-        <div className="w-full h-full flex justify-center items-center">
+        <p className="text-white font-jersey text-3xl text-center"> Partners </p>
+        <div className="w-full h-full flex justify-center items-center mt-10">
           <Swiper
               effect={'coverflow'}
               grabCursor={true}

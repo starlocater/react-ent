@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faGlobe, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 
@@ -59,19 +59,21 @@ const Nav = ({ isOpen, isGuideOpen, setIsOpen, setIsGuideOpen }) => {
                 <span className="text-6xl">ENT</span>
                 <span className="text-4xl">ertainment</span>
             </div>
-            <div className="flex items-center cursor-pointer ml-12" onClick={toggleDropdown_game}>
-                <FontAwesomeIcon icon={faCaretDown} className="text-white" />
+            <div className="hidden lg:flex items-center cursor-pointer ml-12" onClick={toggleDropdown_game}>
+                {!isOpen && <FontAwesomeIcon icon={faCaretDown} className="text-white" />}
+                {isOpen && <FontAwesomeIcon icon={faCaretUp} className="text-white" />}
                 <p className="text-4xl font-jersey text-white ml-4"> GAMES </p>
             </div>
-            <div className="flex items-center cursor-pointer ml-12" onClick={toggleDropdown_guide}>
-                <FontAwesomeIcon icon={faCaretDown} className="text-white" />
+            <div className="hidden lg:flex items-center cursor-pointer ml-12" onClick={toggleDropdown_guide}>
+                {!isGuideOpen && <FontAwesomeIcon icon={faCaretDown} className="text-white" />}
+                {isGuideOpen && <FontAwesomeIcon icon={faCaretUp} className="text-white" />}
                 <p className="text-4xl font-jersey text-white ml-4"> GUIDES </p>
             </div>
-            <div className="flex items-center cursor-pointer ml-24 text-white hover:text-cyan-300" onClick={NavBar_CTOClicked}>
+            <div className="hidden lg:flex items-center cursor-pointer ml-24 text-white hover:text-cyan-300" onClick={NavBar_CTOClicked}>
                 <p className="text-4xl font-jersey ml-4"> MTO server for STREAMERS! </p>
             </div>
         </div>
-        <div className="absolute right-5">
+        <div className="hidden lg:absolute right-5">
             <FontAwesomeIcon icon={faGlobe} className="text-white text-3xl" />
         </div>
         {isOpen && !isGuideOpen && (
